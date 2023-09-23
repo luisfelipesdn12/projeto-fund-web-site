@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #1A202C;
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+header {
+    background-color: white;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: #1A202C solid 0.13rem;
+    border-radius: 0 0 0.3rem 0.3rem;
+}
+
+header > img {
+    height: 5rem;
+}
+
+header > nav {
+    margin-right: 1rem;
+}
+
+header > nav > ul {
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+}
+
+header > nav > ul > li > a {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 0.15rem solid #D9D9D9;
+    padding: 0 0 4px;
+}
+
+header > nav > ul > li > a:hover {
+    border-bottom: 0.15rem solid #1A202C;
+}
+
+main {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+
+main > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4.5rem;
+}
+
+main > h1 > strong {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background-color: #1A202C;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
