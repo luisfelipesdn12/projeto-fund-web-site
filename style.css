@@ -13,12 +13,13 @@ body {
 
 header {
     background-color: white;
+    background-color: transparent;
+    backdrop-filter: blur(0.5rem);
     padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: #1A202C solid 0.13rem;
-    border-radius: 0 0 0.3rem 0.3rem;
+    box-shadow: 0 0 1rem #1A202C33;
 }
 
 header > img {
@@ -53,12 +54,15 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 4rem;
+    position: relative;
+    height: calc(100vh - 96px);
 }
 
 main > h1 {
     font-size: 3rem;
     font-weight: bold;
     line-height: 4.5rem;
+    margin-top: -4rem;
 }
 
 main > h1 > strong {
@@ -68,4 +72,14 @@ main > h1 > strong {
     background-color: #1A202C;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
+}
+
+main > video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
