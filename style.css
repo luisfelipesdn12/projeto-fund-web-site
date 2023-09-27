@@ -47,21 +47,45 @@ header > nav > ul > li > a:hover {
     border-bottom: 0.15rem solid #1A202C;
 }
 
-main {
+main, section {
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 4rem;
+}
+
+main {
     position: relative;
     height: calc(100vh - 96px);
 }
 
-main > h1 {
+section {
+    background-color: #D9D9D9;
+}
+
+section > ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+section > ul > li {
+    background-color: #e2e2e2;
+}
+
+main > h1, section > h1 {
     font-size: 3rem;
     font-weight: bold;
     line-height: 4.5rem;
+}
+
+main > p, section > p {
+    font-size: 1.25rem;
+}
+
+main > h1 {
     margin-top: -4rem;
 }
 
@@ -82,4 +106,30 @@ main > video {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+footer {
+    background-color: #1A202C;
+    backdrop-filter: blur(0.5rem);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    box-shadow: 0 0 1rem #1A202C33;
+    gap: 1rem;
+}
+
+footer > img {
+    background-color: #e2e2e2;
+    border-radius: 0.5rem;
+    height: 4rem;
+}
+
+footer > p {
+    color: #e2e2e2;
+}
+
+form {
+    padding: 4rem;
 }
