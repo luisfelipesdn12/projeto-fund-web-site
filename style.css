@@ -34,7 +34,16 @@ header > nav {
 header > nav > ul {
     gap: 2rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
+}
+
+@media (max-width: 700px) {  
+    header {
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
 }
 
 header > nav > ul > li a {

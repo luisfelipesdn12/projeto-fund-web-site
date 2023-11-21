@@ -11,6 +11,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <meta name="author" content="Luis Felipe Santos do Nascimento">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +31,32 @@
             </ul>
         </nav>
     </header>
+
+    <div id="popup-modal" tabindex="-1"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative rounded-lg shadow bg-[#1A202C]">
+                <button type="button"
+                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="popup-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-4 md:p-5 text-center">
+                    <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><defs><mask id="ipSSuccess0"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path fill="#fff" stroke="#fff" d="m24 4l5.253 3.832l6.503-.012l1.997 6.188l5.268 3.812L41 24l2.021 6.18l-5.268 3.812l-1.997 6.188l-6.503-.012L24 44l-5.253-3.832l-6.503.012l-1.997-6.188l-5.268-3.812L7 24l-2.021-6.18l5.268-3.812l1.997-6.188l6.503.012L24 4Z"/><path stroke="#000" d="m17 24l5 5l10-10"/></g></mask></defs><path fill="#fff" d="M0 0h48v48H0z" mask="url(#ipSSuccess0)"/></svg>
+                    <h3 class="mb-5 text-lg font-normal text-white">Dados enviados com sucesso!</h3>
+                    <button type="button" onclick="window.location.href = '/'"
+                        class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                        Certo!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <form>
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
@@ -44,7 +73,7 @@
                                     class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">github.com.com/</span>
                                 <input type="text" name="username" id="username" autocomplete="username"
                                     class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                    placeholder="luisfelipesdn12">
+                                    placeholder="luisfelipesdn12" required>
                             </div>
                         </div>
                     </div>
@@ -52,7 +81,7 @@
                     <div class="col-span-full">
                         <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Sobre você</label>
                         <div class="mt-2">
-                            <textarea id="about" name="about" rows="3"
+                            <textarea id="about" name="about" rows="3" required
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                         </div>
                         <p class="mt-3 text-sm leading-6 text-gray-600">Para te conhecermos melhor.</p>
@@ -68,7 +97,7 @@
                     <div class="sm:col-span-3">
                         <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
                         <div class="mt-2">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                            <input required type="text" name="first-name" id="first-name" autocomplete="given-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -76,7 +105,7 @@
                     <div class="sm:col-span-3">
                         <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">E-mail</label>
                         <div class="mt-2">
-                            <input id="email" name="email" type="email" autocomplete="email"
+                            <input required id="email" name="email" type="email" autocomplete="email"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -84,7 +113,7 @@
                     <div class="sm:col-span-3">
                         <label for="country" class="block text-sm font-medium leading-6 text-gray-900">País</label>
                         <div class="mt-2">
-                            <select id="country" name="country" autocomplete="country-name"
+                            <select required id="country" name="country" autocomplete="country-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                                 <option>Brasil</option>
                                 <option>United States</option>
@@ -151,12 +180,14 @@
                             <div class="flex items-center gap-x-3">
                                 <input id="push-email" name="push-notifications" type="radio"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                <label for="push-email" class="block text-sm font-medium leading-6 text-gray-900">No meu email</label>
+                                <label for="push-email" class="block text-sm font-medium leading-6 text-gray-900">No meu
+                                    email</label>
                             </div>
                             <div class="flex items-center gap-x-3">
                                 <input id="push-nothing" name="push-notifications" type="radio"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                <label for="push-nothing" class="block text-sm font-medium leading-6 text-gray-900">No meu app</label>
+                                <label for="push-nothing" class="block text-sm font-medium leading-6 text-gray-900">No
+                                    meu app</label>
                             </div>
                         </div>
                     </fieldset>
@@ -166,7 +197,8 @@
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
-            <button type="submit"
+            <button type="button"
+                data-modal-target="popup-modal" data-modal-toggle="popup-modal"
                 class="rounded-md bg-[#1A202C] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A202C]">Salvar</button>
         </div>
     </form>
