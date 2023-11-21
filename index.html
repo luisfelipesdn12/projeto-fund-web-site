@@ -7,6 +7,7 @@
     <title>dev_way - Sua jornada como desenvolvedor!</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -21,17 +22,9 @@
         <nav>
             <ul>
                 <li><a href="/index.html">Início</a></li>
-                <li><a href="/contact.html">Next.js</a></li>
-                <li><a href="/contact.html">Flutter</a></li>
-                <li><a href="/contact.html">Golang</a></li>
-                <!-- <li>
-                    <a href="#">Carreiras ˅</a>
-                    <ul class="sub-nav-list">
-                        <li><a href="/contact.html">Next.js</a></li>
-                        <li><a href="/contact.html">Next.js</a></li>
-                        <li><a href="/contact.html">Next.js</a></li>
-                    </ul>
-                </li> -->
+                <li><a href="/nextjs.html">Next.js</a></li>
+                <li><a href="/flutter.html">Flutter</a></li>
+                <li><a href="/go.html">Golang</a></li>
                 <li><a href="/contact.html">Contato</a></li>
             </ul>
         </nav>
@@ -41,18 +34,18 @@
         <video playsinline autoplay muted loop poster="images/hero_bg.png"">
             <source src=" images/hero_bg.mp4" type="video/mp4">
         </video>
-        <div id="scroll-notice">
+        <div id="scroll-notice" onclick="scrollToHowToStart()">
             <p>Deslize para baixo</p>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><ellipse cx="12" cy="5" fill="#1A202C" rx="4" ry="4"><animate id="svgSpinnersBouncingBall0" fill="freeze" attributeName="cy" begin="0;svgSpinnersBouncingBall2.end" calcMode="spline" dur="0.375s" keySplines=".33,0,.66,.33" values="5;20"/><animate attributeName="rx" begin="svgSpinnersBouncingBall0.end" calcMode="spline" dur="0.05s" keySplines=".33,0,.66,.33;.33,.66,.66,1" values="4;4.8;4"/><animate attributeName="ry" begin="svgSpinnersBouncingBall0.end" calcMode="spline" dur="0.05s" keySplines=".33,0,.66,.33;.33,.66,.66,1" values="4;3;4"/><animate id="svgSpinnersBouncingBall1" attributeName="cy" begin="svgSpinnersBouncingBall0.end" calcMode="spline" dur="0.025s" keySplines=".33,0,.66,.33" values="20;20.5"/><animate id="svgSpinnersBouncingBall2" attributeName="cy" begin="svgSpinnersBouncingBall1.end" calcMode="spline" dur="1s" keySplines=".33,.66,.66,1" values="20.5;5"/></ellipse></svg>
             </div>
         </div>
     </main>
-    <section>
+    <section id="how-to-start">
         <h1>Por onde começar?</h1>
         <p>Conheça as diferentes áreas que você pode seguir nessa área!</p>
         <ul>
-            <li class="max-w-[15rem] rounded overflow-hidden shadow-lg">
+            <a href="nextjs.html" class="max-w-[15rem] rounded overflow-hidden shadow-lg">
                 <img class="w-full h-[15rem] p-4 bg-white" src="https://api.iconify.design/logos:nextjs-icon.svg?color=%23888888">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Desenvolvedor Next.js</div>
@@ -66,8 +59,8 @@
                     <span
                         class="inline-block bg-[#fff] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web</span>
                 </div>
-            </li>
-            <li class="max-w-[15rem] rounded overflow-hidden shadow-lg">
+            </a>
+            <a href="flutter.html" class="max-w-[15rem] rounded overflow-hidden shadow-lg">
                 <img class="w-full h-[15rem] p-4 bg-white" src="https://api.iconify.design/logos:flutter.svg?color=%23888888">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Desenvolvedor Flutter</div>
@@ -81,8 +74,8 @@
                     <span
                         class="inline-block bg-[#fff] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#apps</span>
                 </div>
-            </li>
-            <li class="max-w-[15rem] rounded overflow-hidden shadow-lg">
+            </a>
+            <a href="go.html" class="max-w-[15rem] rounded overflow-hidden shadow-lg">
                 <img class="w-full h-[15rem] p-4 bg-white" src="https://api.iconify.design/logos:go.svg?color=%23888888">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Desenvolvedor Go</div>
@@ -96,7 +89,7 @@
                     <span
                         class="inline-block bg-[#fff] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#api</span>
                 </div>
-            </li>
+            </a>
         </ul>
     </section>
     <footer>
